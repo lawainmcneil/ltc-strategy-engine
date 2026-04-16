@@ -43,6 +43,10 @@ const output = {
   legacyImpact: document.querySelector("#legacyImpact"),
   preservedAssets: document.querySelector("#preservedAssets"),
   summaryScenario: document.querySelector("#summaryScenario"),
+  summaryHeadline: document.querySelector("#summaryHeadline"),
+  summaryTotalRisk: document.querySelector("#summaryTotalRisk"),
+  summaryLiquidRisk: document.querySelector("#summaryLiquidRisk"),
+  summaryPreserved: document.querySelector("#summaryPreserved"),
   summarySentence: document.querySelector("#summarySentence"),
   attorneyLens: document.querySelector("#attorneyLens"),
   inflationLabel: document.querySelector("#inflationLabel"),
@@ -178,7 +182,11 @@ const updateOutputs = () => {
     : "The stated legacy goal remains mathematically intact in this scenario, before taxes, markets, and legal costs.";
   output.preservedAssets.textContent = currency.format(preserved);
   output.summaryScenario.textContent = `${scenario.selectedState.name} / ${scenario.careLabel} / ${scenario.horizon}-year horizon`;
-  output.summarySentence.textContent = `Based on this scenario, a ${scenario.horizon}-year care event could consume ${percent.format(clamp(totalExposure, 0, 9.99))} of total assets and ${percent.format(clamp(liquidExposure, 0, 9.99))} of liquid assets. A planning strategy modeled at a ${percent.format(scenario.offset)} offset may preserve approximately ${currency.format(preserved)} for spouse, heirs, liquidity, or legal objectives.`;
+  output.summaryHeadline.textContent = `A ${scenario.horizon}-year care event could put ${currency.format(scenario.grossCost)} in motion.`;
+  output.summaryTotalRisk.textContent = percent.format(clamp(totalExposure, 0, 9.99));
+  output.summaryLiquidRisk.textContent = percent.format(clamp(liquidExposure, 0, 9.99));
+  output.summaryPreserved.textContent = currency.format(preserved);
+  output.summarySentence.textContent = `A planning strategy modeled at a ${percent.format(scenario.offset)} offset may preserve assets for spouse, heirs, liquidity, or legal objectives.`;
   output.attorneyLens.textContent = level === "critical"
     ? "This exposure could materially change estate execution, beneficiary expectations, and family administration duties."
     : level === "material"
