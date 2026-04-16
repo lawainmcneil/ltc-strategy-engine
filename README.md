@@ -1,6 +1,6 @@
-# LTC Strategy Engine
+# CareCapital Shield
 
-A single-page Financial Fire Drill prototype for presenting long term care planning scenarios to attorneys and clients.
+A single-page Enhanced Funding Solutions prototype for presenting asset-based long term care planning scenarios to attorneys and clients.
 
 ## Run
 
