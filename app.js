@@ -135,6 +135,8 @@ const buildChartData = (scenario) => {
     noPlanning.push(Math.max(0, Math.round(noPlanningAssets)));
     planning.push(Math.max(0, Math.round(planningAssets)));
 
+    if (year === scenario.horizon) break;
+
     const annualDraw = scenario.annualCost * Math.pow(1 + scenario.inflationRate, year);
     noPlanningAssets -= annualDraw;
     planningAssets -= annualDraw * (1 - scenario.offset);
