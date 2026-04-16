@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCapital Shield Intake | Enhanced Funding Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: "#050d3d",
+            efsblue: "#111a5c",
+            efsgreen: "#2f6b1f",
+            gold: "#b98b2b",
+            paper: "#f5f7f3",
+            mist: "#dce6d7"
+          },
+          boxShadow: {
+            hard: "0 18px 40px rgba(5, 13, 61, 0.16)"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background: #f5f7f3;
+      color: #050d3d;
+    }
+
+    input:not([type="checkbox"]),
+    textarea {
+      min-height: 42px;
+    }
+
+    input[type="checkbox"] {
+      flex: 0 0 auto;
+      height: 1rem;
+      min-height: 0;
+      width: 1rem;
+    }
+
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+
+      body {
+        background: white;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <header class="no-print sticky top-0 z-50 border-b border-navy/10 bg-white text-navy shadow-sm">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+      <a href="./efs-carecapital-shield.html" class="flex items-center gap-3">
+        <img class="h-14 w-24 object-contain" src="./assets/efs-logo.png?v=20260416-2" alt="Enhanced Funding Solutions logo" />
+        <span>
+          <span class="block text-sm font-black uppercase tracking-wide">Enhanced Funding Solutions</span>
+          <span class="block text-xs font-bold text-efsgreen">CareCapital Shield Intake</span>
+        </span>
+      </a>
+      <button onclick="window.print()" class="rounded bg-efsgreen px-4 py-3 text-sm font-black uppercase tracking-wide text-white">
+        Print Intake
+      </button>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+    <section class="overflow-hidden rounded border border-navy/10 bg-white shadow-hard">
+      <div class="bg-navy p-6 text-white">
+        <p class="text-sm font-black uppercase tracking-wide text-gold">An Enhanced Funding Solutions Product</p>
+        <h1 class="mt-2 text-3xl font-black sm:text-5xl">CareCapital Shield Intake</h1>
+        <p class="mt-4 max-w-3xl leading-7 text-mist">
+          Gather the financial, health, and income details needed to evaluate whether asset-based long-term care planning should be part of the conversation.
+        </p>
+      </div>
+
+      <div class="grid gap-6 p-6">
+        <section>
+          <h2 class="border-l-4 border-efsgreen pl-4 text-2xl font-black">1. Client Information</h2>
+          <div class="mt-5 grid gap-4 md:grid-cols-2">
+            <label class="block text-sm font-bold">Client full name <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">Date of birth <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" placeholder="mm/dd/yyyy" /></label>
+            <label class="block text-sm font-bold">Spouse full name <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">Spouse date of birth <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" placeholder="mm/dd/yyyy" /></label>
+            <label class="block text-sm font-bold">State <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">Attorney / advisor <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="border-l-4 border-efsgreen pl-4 text-2xl font-black">2. Care Funding Scenario</h2>
+          <div class="mt-5 grid gap-4 md:grid-cols-4">
+            <label class="block text-sm font-bold">Care setting <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" placeholder="Home, assisted living, nursing home" /></label>
+            <label class="block text-sm font-bold">Planning horizon <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" placeholder="3, 5, 7, or 10 years" /></label>
+            <label class="block text-sm font-bold">Estimated monthly cost <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">Projected total exposure <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="border-l-4 border-efsgreen pl-4 text-2xl font-black">3. Assets Available for Repositioning</h2>
+          <p class="mt-2 text-sm font-semibold text-navy/70">Identify assets that may be exposed to care costs or available for a dedicated care-funding strategy.</p>
+          <div class="mt-5 grid gap-3 md:grid-cols-3">
+            <label class="block text-sm font-bold">Checking / savings <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">Stocks / bonds <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">Mutual funds / brokerage <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">Life insurance cash value <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">IRA / retirement assets <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">Annuities <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">Potential 1035 exchange source <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">Other available assets <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">Total funding pool <input class="mt-2 w-full rounded border-2 border-efsgreen/40 px-3 py-2" /></label>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="border-l-4 border-efsgreen pl-4 text-2xl font-black">4. Asset-Based LTC Interest</h2>
+          <div class="mt-5 grid gap-4 md:grid-cols-2">
+            <div class="rounded border border-navy/10 bg-paper p-4">
+              <p class="font-black">Would you like to evaluate dedicated care benefits?</p>
+              <div class="mt-3 flex gap-6 text-sm font-bold">
+                <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Yes</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />No</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Needs discussion</label>
+              </div>
+            </div>
+            <div class="rounded border border-navy/10 bg-paper p-4">
+              <p class="font-black">Preferred care benefit uses</p>
+              <div class="mt-3 grid gap-2 text-sm font-bold sm:grid-cols-2">
+                <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Home care</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Assisted living</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Adult day care</label>
+                <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Nursing home</label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="border-l-4 border-efsgreen pl-4 text-2xl font-black">5. Health Pre-Screen</h2>
+          <p class="mt-2 text-sm font-semibold text-navy/70">This is not an application. It helps determine whether a deeper planning conversation is appropriate.</p>
+          <div class="mt-5 overflow-x-auto">
+            <table class="w-full min-w-[820px] border-collapse text-left text-sm">
+              <thead class="bg-navy text-white">
+                <tr>
+                  <th class="border border-navy/20 p-3">Question</th>
+                  <th class="border border-navy/20 p-3 text-center">Client</th>
+                  <th class="border border-navy/20 p-3 text-center">Spouse</th>
+                  <th class="border border-navy/20 p-3">Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="border p-3">Recent nursing home, assisted living, hospice, terminal illness, or need for daily living assistance?</td><td class="border p-3 text-center"><input type="checkbox" /></td><td class="border p-3 text-center"><input type="checkbox" /></td><td class="border p-3"></td></tr>
+                <tr><td class="border p-3">Currently hospitalized, bedridden, or using mobility, oxygen, dialysis, or respiratory equipment?</td><td class="border p-3 text-center"><input type="checkbox" /></td><td class="border p-3 text-center"><input type="checkbox" /></td><td class="border p-3"></td></tr>
+                <tr><td class="border p-3">History of HIV/AIDS-related diagnosis or positive test?</td><td class="border p-3 text-center"><input type="checkbox" /></td><td class="border p-3 text-center"><input type="checkbox" /></td><td class="border p-3"></td></tr>
+                <tr><td class="border p-3">If under age 65, any physical or cognitive reason full employment is not possible, or disability income in the past five years?</td><td class="border p-3 text-center"><input type="checkbox" /></td><td class="border p-3 text-center"><input type="checkbox" /></td><td class="border p-3"></td></tr>
+                <tr><td class="border p-3">Diagnosis or treatment for memory loss, dementia, Parkinson's, MS, ALS, muscular dystrophy, Down syndrome, organ transplant, or active cancer?</td><td class="border p-3 text-center"><input type="checkbox" /></td><td class="border p-3 text-center"><input type="checkbox" /></td><td class="border p-3"></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="border-l-4 border-efsgreen pl-4 text-2xl font-black">6. Health Profile</h2>
+          <div class="mt-5 grid gap-4 md:grid-cols-4">
+            <label class="block text-sm font-bold">Client height <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">Client weight <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">Spouse height <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+            <label class="block text-sm font-bold">Spouse weight <input class="mt-2 w-full rounded border border-navy/20 px-3 py-2" /></label>
+          </div>
+          <div class="mt-5 grid gap-2 text-sm font-bold sm:grid-cols-2 lg:grid-cols-3">
+            <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Diabetes</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Depression</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />High blood pressure</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Cancer</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />COPD / chronic lung disease</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Heart disease</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Heart attack</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Congestive heart failure</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Cardiomyopathy</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Organ disease / failure</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Alcohol or drug abuse</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Other condition</label>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="border-l-4 border-efsgreen pl-4 text-2xl font-black">7. Medications</h2>
+          <div class="mt-5 overflow-x-auto">
+            <table class="w-full min-w-[760px] border-collapse text-left text-sm">
+              <thead class="bg-navy text-white"><tr><th class="border p-3">Medication</th><th class="border p-3">Client / Spouse</th><th class="border p-3">Dose / Frequency</th><th class="border p-3">Reason</th><th class="border p-3">Length of time</th></tr></thead>
+              <tbody>
+                <tr><td class="border p-3">&nbsp;</td><td class="border p-3"></td><td class="border p-3"></td><td class="border p-3"></td><td class="border p-3"></td></tr>
+                <tr><td class="border p-3">&nbsp;</td><td class="border p-3"></td><td class="border p-3"></td><td class="border p-3"></td><td class="border p-3"></td></tr>
+                <tr><td class="border p-3">&nbsp;</td><td class="border p-3"></td><td class="border p-3"></td><td class="border p-3"></td><td class="border p-3"></td></tr>
+                <tr><td class="border p-3">&nbsp;</td><td class="border p-3"></td><td class="border p-3"></td><td class="border p-3"></td><td class="border p-3"></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="border-l-4 border-efsgreen pl-4 text-2xl font-black">8. Monthly Income</h2>
+          <div class="mt-4 rounded border border-navy/10 bg-paper p-4">
+            <p class="font-black">Do you rely on IRA income for living expenses?</p>
+            <div class="mt-3 flex gap-6 text-sm font-bold">
+              <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />Yes</label>
+              <label class="inline-flex items-center gap-2"><input type="checkbox" class="accent-efsgreen" />No</label>
+            </div>
+          </div>
+          <div class="mt-5 overflow-x-auto">
+            <table class="w-full min-w-[640px] border-collapse text-left text-sm">
+              <thead class="bg-navy text-white"><tr><th class="border p-3">Income type</th><th class="border p-3">Client monthly income</th><th class="border p-3">Spouse monthly income</th></tr></thead>
+              <tbody>
+                <tr><td class="border p-3 font-bold">Social Security</td><td class="border p-3"></td><td class="border p-3"></td></tr>
+                <tr><td class="border p-3 font-bold">Gross wages</td><td class="border p-3"></td><td class="border p-3"></td></tr>
+                <tr><td class="border p-3 font-bold">Pension</td><td class="border p-3"></td><td class="border p-3"></td></tr>
+                <tr><td class="border p-3 font-bold">Other</td><td class="border p-3"></td><td class="border p-3"></td></tr>
+                <tr><td class="border p-3 font-black">Total</td><td class="border p-3"></td><td class="border p-3"></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="border-l-4 border-efsgreen pl-4 text-2xl font-black">9. Advisor Notes</h2>
+          <textarea class="mt-5 min-h-32 w-full rounded border border-navy/20 p-4" placeholder="Asset positioning notes, health follow-up items, attorney coordination, family priorities"></textarea>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-navy/10 bg-white px-4 py-6 text-center text-sm font-semibold text-navy/65">
+    &copy; 2026 Sherpa Systems, LLC.
+  </footer>
+</body>
+</html>
