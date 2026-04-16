@@ -224,11 +224,14 @@ const initChart = () => {
         {
           label: "No Planning",
           data: [],
-          borderColor: "#050d3d",
-          backgroundColor: "rgba(5, 13, 61, 0.12)",
+          borderColor: "#ffffff",
+          backgroundColor: "rgba(255, 255, 255, 0.12)",
           fill: true,
           tension: 0.28,
-          pointRadius: 4
+          pointRadius: 4,
+          pointBackgroundColor: "#ffffff",
+          pointBorderColor: "#050d3d",
+          pointBorderWidth: 2
         },
         {
           label: "Asset-Based LTC Strategy",
