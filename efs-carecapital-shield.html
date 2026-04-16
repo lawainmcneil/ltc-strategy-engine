@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareCapital Shield | Enhanced Funding Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: "#050d3d",
+            efsblue: "#111a5c",
+            efsgreen: "#2f6b1f",
+            signal: "#b42318",
+            gold: "#b98b2b",
+            paper: "#f5f7f3",
+            mist: "#dce6d7"
+          },
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+          },
+          boxShadow: {
+            hard: "0 18px 40px rgba(24, 25, 27, 0.16)"
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5f7f3;
+      color: #050d3d;
+    }
+
+    .signal-stripe {
+      background: repeating-linear-gradient(135deg, rgba(47, 107, 31, 0.34) 0 8px, rgba(5, 13, 61, 0.12) 8px 20px);
+    }
+
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+
+      body {
+        background: #ffffff;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <header class="no-print sticky top-0 z-50 border-b border-white/10 bg-navy/95 text-white backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <a href="#top" class="flex items-center gap-3" aria-label="Enhanced Funding Solutions home">
+        <img class="h-12 w-20 object-contain" src="./assets/efs-logo.png?v=20260416-1" alt="Enhanced Funding Solutions logo" />
+        <span>
+          <span class="block text-sm font-black uppercase tracking-wide">Enhanced Funding Solutions</span>
+          <span class="block text-xs text-mist">Asset protection through prepared funding</span>
+        </span>
+      </a>
+      <div class="hidden items-center gap-5 text-sm font-semibold text-mist md:flex">
+        <a class="hover:text-white" href="#walkthrough">Walk Through</a>
+        <a class="hover:text-white" href="#risk">Risk Readout</a>
+        <a class="hover:text-white" href="#impact">Asset Impact</a>
+        <a class="hover:text-white" href="#action">Action Plan</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="relative min-h-[88vh] overflow-hidden bg-navy text-white">
+      <img
+        class="absolute inset-0 h-full w-full object-cover opacity-25"
+        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80"
+        alt="Professional advisory meeting room"
+      />
+      <div class="absolute inset-0 bg-navy/82"></div>
+      <div class="signal-stripe absolute bottom-0 left-0 right-0 h-4"></div>
+      <div class="relative mx-auto grid min-h-[88vh] max-w-7xl content-center gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
+        <div>
+          <div class="mb-7 inline-flex items-center gap-3 rounded border border-gold/70 bg-black/20 px-4 py-2 text-xs font-black uppercase tracking-wide text-gold">
+            <span class="h-2 w-2 bg-signal"></span>
+            An Estate Planning Attorney & EFS Partnership
+          </div>
+          <h1 class="max-w-4xl text-4xl font-black leading-tight sm:text-6xl lg:text-7xl">
+            CareCapital Shield
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-mist">
+            See how care costs can affect assets, estate plans, and family outcomes before a crisis forces decisions.
+          </p>
+          <p class="mt-4 max-w-2xl text-base leading-7 text-white/78">
+            A guided long term care planning tool for repositioning exposed assets into protected care capital before a health event forces decisions.
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <button id="startDrill" class="rounded bg-signal px-6 py-4 text-sm font-black uppercase tracking-wide text-white shadow-hard transition hover:bg-red-800">
+              Start the Walk Through
+            </button>
+            <a href="#risk" class="rounded border border-gold px-6 py-4 text-center text-sm font-black uppercase tracking-wide text-gold transition hover:bg-gold hover:text-navy">
+              Run the Drill
+            </a>
+          </div>
+        </div>
+        <aside class="self-center rounded border border-gold/60 bg-white p-6 text-navy shadow-hard">
+          <div class="mb-5 flex items-center justify-between gap-5">
+            <div>
+              <p class="text-xs font-black uppercase tracking-wide text-signal">Preparedness Readout</p>
+              <h2 class="mt-2 text-2xl font-black">The goal is not panic. The goal is preparedness.</h2>
+            </div>
+            <img class="h-28 w-40 shrink-0 object-contain" src="./assets/efs-logo.png?v=20260416-1" alt="Enhanced Funding Solutions logo" />
+          </div>
+          <div class="grid gap-3 text-sm leading-6">
+            <p><strong>70%</strong> of people turning 65 are expected to need long term care.</p>
+            <p><strong>73%</strong> of Americans have not planned for long term care.</p>
+            <p><strong>3:1</strong> asset-based LTC leverage can turn $100,000 into up to $300,000 of care benefits.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="bg-white py-12">
+      <div class="mx-auto grid max-w-7xl gap-4 px-4 sm:px-6 md:grid-cols-4 lg:px-8">
+        <article class="rounded border border-navy/10 bg-paper p-5">
+          <p class="text-4xl font-black text-efsgreen">70%</p>
+          <p class="mt-2 text-sm font-bold leading-6 text-navy/75">of people turning 65 are expected to need long term care.</p>
+        </article>
+        <article class="rounded border border-navy/10 bg-paper p-5">
+          <p class="text-4xl font-black text-signal">73%</p>
+          <p class="mt-2 text-sm font-bold leading-6 text-navy/75">of Americans have not planned for long term care.</p>
+        </article>
+        <article class="rounded border border-navy/10 bg-paper p-5">
+          <p class="text-4xl font-black text-navy">$306K</p>
+          <p class="mt-2 text-sm font-bold leading-6 text-navy/75">can be required for a three-year nursing home stay at $8,500 per month.</p>
+        </article>
+        <article class="rounded border border-navy/10 bg-paper p-5">
+          <p class="text-4xl font-black text-gold">3:1</p>
+          <p class="mt-2 text-sm font-bold leading-6 text-navy/75">$100,000 can model up to $300,000 in tax-free LTC benefits.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="walkthrough" class="bg-paper py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-9 border-l-4 border-gold pl-5">
+          <p class="text-sm font-black uppercase tracking-wide text-signal">Walk Through</p>
+          <h2 class="mt-2 text-3xl font-black text-navy sm:text-4xl">Enter the scenario</h2>
+          <p class="mt-3 max-w-3xl text-base leading-7 text-navy/75">Use a client-ready example or adjust the fields live during an attorney meeting.</p>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <form class="rounded border border-navy/10 bg-white p-5 shadow-hard">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <label class="block">
+                <span class="text-sm font-bold">State</span>
+                <select id="state" class="mt-2 w-full rounded border border-navy/20 bg-white px-3 py-3"></select>
+              </label>
+              <label class="block">
+                <span class="text-sm font-bold">Care type</span>
+                <select id="careType" class="mt-2 w-full rounded border border-navy/20 bg-white px-3 py-3">
+                  <option value="inHome">In-home care</option>
+                  <option value="assistedLiving">Assisted living care</option>
+                  <option value="nursingHome">Nursing home care</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="text-sm font-bold">Age</span>
+                <input id="age" type="number" value="68" min="40" max="100" class="mt-2 w-full rounded border border-navy/20 px-3 py-3" />
+              </label>
+              <label class="block">
+                <span class="text-sm font-bold">Marital status</span>
+                <select id="maritalStatus" class="mt-2 w-full rounded border border-navy/20 bg-white px-3 py-3">
+                  <option>Married</option>
+                  <option>Single</option>
+                  <option>Widowed</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="text-sm font-bold">Total investable assets</span>
+                <input id="totalAssets" type="text" inputmode="numeric" value="1,250,000" class="mt-2 w-full rounded border border-navy/20 px-3 py-3" />
+              </label>
+              <label class="block">
+                <span class="text-sm font-bold">Liquid assets</span>
+                <input id="liquidAssets" type="text" inputmode="numeric" value="450,000" class="mt-2 w-full rounded border border-navy/20 px-3 py-3" />
+              </label>
+              <label class="block">
+                <span class="text-sm font-bold">Annual household income</span>
+                <input id="income" type="text" inputmode="numeric" value="160,000" class="mt-2 w-full rounded border border-navy/20 px-3 py-3" />
+              </label>
+              <label class="block">
+                <span class="text-sm font-bold">Planning horizon</span>
+                <select id="horizon" class="mt-2 w-full rounded border border-navy/20 bg-white px-3 py-3">
+                  <option value="3">3 years</option>
+                  <option value="5" selected>5 years</option>
+                  <option value="7">7 years</option>
+                  <option value="10">10 years</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="text-sm font-bold">Legacy goal amount</span>
+                <input id="legacyGoal" type="text" inputmode="numeric" value="850,000" class="mt-2 w-full rounded border border-navy/20 px-3 py-3" />
+              </label>
+              <label class="block">
+                <span class="text-sm font-bold">Home value</span>
+                <input id="homeValue" type="text" inputmode="numeric" value="525,000" class="mt-2 w-full rounded border border-navy/20 px-3 py-3" />
+              </label>
+              <label class="block sm:col-span-2">
+                <span class="text-sm font-bold">Asset-based LTC reposition amount</span>
+                <input id="fundingDeposit" type="text" inputmode="numeric" value="100,000" class="mt-2 w-full rounded border border-navy/20 px-3 py-3" />
+              </label>
+            </div>
+            <div class="mt-6 grid gap-5 border-t border-navy/10 pt-5">
+              <label class="flex items-center gap-3 text-sm font-bold">
+                <input id="inflationEnabled" type="checkbox" class="h-5 w-5 accent-signal" checked />
+                Include care-cost inflation
+              </label>
+              <label class="block">
+                <span class="flex justify-between text-sm font-bold">Inflation assumption <span id="inflationLabel">3.0%</span></span>
+                <input id="inflationRate" type="range" min="0" max="7" step="0.5" value="3" class="mt-2 w-full accent-signal" />
+              </label>
+              <label class="block">
+                <span class="flex justify-between text-sm font-bold">Asset-based LTC benefit leverage <span id="leverageLabel">3:1</span></span>
+                <input id="benefitLeverage" type="range" min="1" max="3" step="0.25" value="3" class="mt-2 w-full accent-gold" />
+              </label>
+            </div>
+          </form>
+
+          <aside class="grid gap-4">
+            <div class="rounded border border-navy/10 bg-navy p-6 text-white shadow-hard">
+              <p class="text-sm font-black uppercase tracking-wide text-gold">Advisor Framing</p>
+              <h3 class="mt-2 text-2xl font-black">This is not only a care issue. It is an estate execution issue.</h3>
+              <p class="mt-4 leading-7 text-mist">Long term care can put liquidity strain on a family at exactly the wrong time. The conversation belongs alongside documents, beneficiary goals, trust funding, and family administration.</p>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="rounded border border-navy/10 bg-white p-5 shadow-hard">
+                <p class="text-sm font-black uppercase tracking-wide text-signal">Reposition</p>
+                <p class="mt-2 leading-6 text-navy/75">Identify assets that may be exposed to care costs before the family is under pressure.</p>
+              </div>
+              <div class="rounded border border-navy/10 bg-white p-5 shadow-hard">
+                <p class="text-sm font-black uppercase tracking-wide text-signal">Protect</p>
+                <p class="mt-2 leading-6 text-navy/75">Coordinate advisor strategy with legal planning so care funding supports the estate plan.</p>
+              </div>
+              <div class="rounded border border-navy/10 bg-white p-5 shadow-hard sm:col-span-2">
+                <p class="text-sm font-black uppercase tracking-wide text-signal">Prepare</p>
+                <p class="mt-2 leading-6 text-navy/75">Create a family roadmap before decisions must be made during a health event.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="risk" class="bg-white py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-9 border-l-4 border-signal pl-5">
+          <p class="text-sm font-black uppercase tracking-wide text-signal">Risk Readout</p>
+          <h2 class="mt-2 text-3xl font-black sm:text-4xl">Convert care costs into planning pressure</h2>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded border border-navy/10 bg-paper p-5 shadow-hard">
+            <p class="text-sm font-black uppercase tracking-wide text-navy/60">Annual state cost</p>
+            <p id="annualCost" class="mt-3 text-4xl font-black text-signal">$0</p>
+            <p id="monthlyCost" class="mt-2 text-sm font-bold text-navy/70">$0 per month</p>
+          </article>
+          <article class="rounded border border-navy/10 bg-paper p-5 shadow-hard">
+            <p class="text-sm font-black uppercase tracking-wide text-navy/60">Projected care event</p>
+            <p id="projectedCost" class="mt-3 text-4xl font-black text-navy">$0</p>
+            <p class="mt-2 text-sm font-bold text-navy/70">Includes selected horizon and visible assumptions.</p>
+          </article>
+          <article class="rounded border border-navy/10 bg-paper p-5 shadow-hard">
+            <p class="text-sm font-black uppercase tracking-wide text-navy/60">Liquid assets consumed</p>
+            <p id="liquidExposure" class="mt-3 text-4xl font-black text-signal">0%</p>
+            <p id="depletionTimeline" class="mt-2 text-sm font-bold text-navy/70">0 years.</p>
+          </article>
+          <article class="rounded border border-navy/10 bg-paper p-5 shadow-hard">
+            <p class="text-sm font-black uppercase tracking-wide text-navy/60">Total assets at risk</p>
+            <p id="totalExposure" class="mt-3 text-4xl font-black text-navy">0%</p>
+            <p id="stateCompare" class="mt-2 text-sm font-bold text-navy/70">State comparison.</p>
+          </article>
+        </div>
+        <div class="mt-6 grid gap-4 lg:grid-cols-3">
+          <article class="rounded border border-efsgreen/20 bg-white p-5 shadow-hard">
+            <p class="text-sm font-black uppercase tracking-wide text-efsgreen">Asset-based LTC benefit pool</p>
+            <p id="ltcBenefitPool" class="mt-3 text-4xl font-black text-efsgreen">$0</p>
+            <p id="leverageReadout" class="mt-2 text-sm font-bold text-navy/70">Modeled from repositioned assets.</p>
+          </article>
+          <article class="rounded border border-efsgreen/20 bg-white p-5 shadow-hard">
+            <p class="text-sm font-black uppercase tracking-wide text-efsgreen">Care exposure left unfunded</p>
+            <p id="unfundedExposure" class="mt-3 text-4xl font-black text-navy">$0</p>
+            <p class="mt-2 text-sm font-bold text-navy/70">After modeled asset-based LTC benefits are applied.</p>
+          </article>
+          <article class="rounded border border-gold/30 bg-white p-5 shadow-hard">
+            <p class="text-sm font-black uppercase tracking-wide text-gold">Why asset-based planning</p>
+            <p class="mt-3 text-sm font-bold leading-6 text-navy/75">Fixed premiums, death benefit guarantees, and tax-free access for qualified care help avoid the traditional use-it-or-lose-it concern.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" class="bg-navy py-16 text-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-9 border-l-4 border-gold pl-5">
+          <p class="text-sm font-black uppercase tracking-wide text-gold">Asset Impact</p>
+          <h2 class="mt-2 text-3xl font-black sm:text-4xl">The visual moment in the meeting</h2>
+          <p class="mt-3 max-w-3xl leading-7 text-mist">The red path pays directly from the portfolio. The green path applies a dedicated asset-based LTC benefit pool before the portfolio is tapped.</p>
+        </div>
+        <div class="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
+          <div class="h-[420px] rounded border border-white/10 bg-black/20 p-4 shadow-hard">
+            <canvas id="impactChart" aria-label="Asset depletion comparison chart" role="img"></canvas>
+          </div>
+          <div class="grid gap-4">
+            <article class="rounded border border-white/10 bg-white p-5 text-navy shadow-hard">
+              <p class="text-sm font-black uppercase tracking-wide text-signal">Remaining assets after care</p>
+              <p id="remainingAssets" class="mt-3 text-4xl font-black">$0</p>
+            </article>
+            <article class="rounded border border-white/10 bg-white p-5 text-navy shadow-hard">
+              <p class="text-sm font-black uppercase tracking-wide text-efsgreen">Modeled assets preserved</p>
+              <p id="preservedAssets" class="mt-3 text-4xl font-black text-efsgreen">$0</p>
+            </article>
+            <article class="rounded border border-gold/50 bg-black/20 p-5">
+              <p class="text-sm font-black uppercase tracking-wide text-gold">Legacy pressure</p>
+              <p id="legacyImpact" class="mt-3 leading-7 text-mist">Legacy readout.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-paper py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-9 border-l-4 border-gold pl-5">
+          <p class="text-sm font-black uppercase tracking-wide text-signal">Planning Comparison</p>
+          <h2 class="mt-2 text-3xl font-black text-navy sm:text-4xl">Two paths, very different family experiences</h2>
+          <p class="mt-3 max-w-3xl leading-7 text-navy/75">The numbers matter, but the real planning question is what happens around the family when care decisions arrive.</p>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-2">
+          <article class="overflow-hidden rounded border-2 border-signal/40 bg-white shadow-hard">
+            <div class="bg-signal p-6 text-white">
+              <p class="text-sm font-black uppercase tracking-wide text-white/80">Without a strategy</p>
+              <h3 class="mt-2 text-3xl font-black">The default path</h3>
+              <p class="mt-3 leading-7 text-white/85">Care costs are handled under pressure, often by drawing from the assets the estate plan was meant to preserve.</p>
+            </div>
+            <div class="grid gap-3 p-6">
+              <div class="flex gap-4 rounded border border-signal/20 bg-red-50 p-4">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded bg-signal text-sm font-black text-white">1</span>
+                <p class="font-bold text-navy">Portfolio and liquid reserves become the first line of defense.</p>
+              </div>
+              <div class="flex gap-4 rounded border border-signal/20 bg-red-50 p-4">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded bg-signal text-sm font-black text-white">2</span>
+                <p class="font-bold text-navy">Forced liquidation can happen when timing is unfavorable.</p>
+              </div>
+              <div class="flex gap-4 rounded border border-signal/20 bg-red-50 p-4">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded bg-signal text-sm font-black text-white">3</span>
+                <p class="font-bold text-navy">Spouse, heirs, and adult children absorb more coordination stress.</p>
+              </div>
+              <div class="flex gap-4 rounded border border-signal/20 bg-red-50 p-4">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded bg-signal text-sm font-black text-white">4</span>
+                <p class="font-bold text-navy">Estate documents may be technically sound but financially strained.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="overflow-hidden rounded border-2 border-gold/60 bg-white shadow-hard">
+            <div class="bg-navy p-6 text-white">
+              <p class="text-sm font-black uppercase tracking-wide text-gold">With a strategy</p>
+              <h3 class="mt-2 text-3xl font-black">The prepared path</h3>
+              <p class="mt-3 leading-7 text-mist">A dedicated plan gives the family a funding roadmap before health, legal, and financial decisions collide.</p>
+            </div>
+            <div class="grid gap-3 p-6">
+              <div class="flex gap-4 rounded border border-gold/30 bg-yellow-50 p-4">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded bg-gold text-sm font-black text-white">1</span>
+                <p class="font-bold text-navy">Exposed assets are repositioned into a dedicated long term care benefit pool.</p>
+              </div>
+              <div class="flex gap-4 rounded border border-gold/30 bg-yellow-50 p-4">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded bg-gold text-sm font-black text-white">2</span>
+                <p class="font-bold text-navy">A $100,000 allocation can model up to $300,000 in tax-free care benefits.</p>
+              </div>
+              <div class="flex gap-4 rounded border border-gold/30 bg-yellow-50 p-4">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded bg-gold text-sm font-black text-white">3</span>
+                <p class="font-bold text-navy">Unused value may remain available through policy cash value or death benefit guarantees.</p>
+              </div>
+              <div class="flex gap-4 rounded border border-gold/30 bg-yellow-50 p-4">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded bg-gold text-sm font-black text-white">4</span>
+                <p class="font-bold text-navy">Attorney and advisor work from the same family protection map.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="action" class="bg-white py-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="overflow-hidden rounded border border-navy/10 bg-paper shadow-hard">
+          <div class="bg-navy p-6 text-white sm:p-8">
+            <div class="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+              <div>
+                <p class="text-sm font-black uppercase tracking-wide text-gold">Action Plan Summary</p>
+                <h2 class="mt-2 text-3xl font-black sm:text-4xl">Continue the planning conversation</h2>
+                <p id="summaryScenario" class="mt-3 inline-flex rounded border border-gold/60 px-3 py-2 text-sm font-black uppercase tracking-wide text-mist">Scenario</p>
+              </div>
+              <button id="printSummary" class="no-print rounded bg-signal px-5 py-3 text-sm font-black uppercase tracking-wide text-white transition hover:bg-red-800">
+                Print Summary
+              </button>
+            </div>
+          </div>
+
+          <div class="grid gap-6 p-6 sm:p-8 lg:grid-cols-[1.05fr_0.95fr]">
+            <div class="grid gap-4">
+              <div class="rounded border-2 border-signal/30 bg-white p-5 shadow-hard">
+                <p class="text-sm font-black uppercase tracking-wide text-signal">Client Readout</p>
+                <h3 id="summaryHeadline" class="mt-2 text-2xl font-black leading-tight text-navy">Care exposure creates planning pressure.</h3>
+                <div class="mt-5 grid gap-3 sm:grid-cols-3">
+                  <div class="rounded border border-signal/20 bg-red-50 p-4">
+                    <p class="text-xs font-black uppercase tracking-wide text-navy/55">Total assets at risk</p>
+                    <p id="summaryTotalRisk" class="mt-2 text-3xl font-black text-signal">0%</p>
+                  </div>
+                  <div class="rounded border border-signal/20 bg-red-50 p-4">
+                    <p class="text-xs font-black uppercase tracking-wide text-navy/55">Liquid assets consumed</p>
+                    <p id="summaryLiquidRisk" class="mt-2 text-3xl font-black text-signal">0%</p>
+                  </div>
+                  <div class="rounded border border-gold/30 bg-yellow-50 p-4">
+                    <p class="text-xs font-black uppercase tracking-wide text-navy/55">Modeled preservation</p>
+                    <p id="summaryPreserved" class="mt-2 text-3xl font-black text-gold">$0</p>
+                  </div>
+                </div>
+                <p id="summarySentence" class="mt-5 rounded border border-navy/10 bg-paper p-4 text-base font-bold leading-7 text-navy">Summary sentence.</p>
+              </div>
+
+              <div class="grid gap-3 sm:grid-cols-3">
+                <div class="rounded border border-navy/10 bg-white p-4">
+                  <p class="text-xs font-black uppercase tracking-wide text-navy/55">Focus</p>
+                  <p class="mt-2 text-lg font-black text-navy">Liquidity</p>
+                </div>
+                <div class="rounded border border-navy/10 bg-white p-4">
+                  <p class="text-xs font-black uppercase tracking-wide text-navy/55">Protect</p>
+                  <p class="mt-2 text-lg font-black text-navy">Family Roles</p>
+                </div>
+                <div class="rounded border border-navy/10 bg-white p-4">
+                  <p class="text-xs font-black uppercase tracking-wide text-navy/55">Preserve</p>
+                  <p class="mt-2 text-lg font-black text-navy">Legacy Goals</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded border-2 border-gold/50 bg-navy p-6 text-white shadow-hard">
+              <p class="text-sm font-black uppercase tracking-wide text-gold">Attorney + Advisor Next Steps</p>
+              <p id="attorneyLens" class="mt-3 rounded border border-white/10 bg-white/5 p-4 font-bold leading-7 text-mist">Attorney lens.</p>
+              <div class="mt-5 grid gap-3">
+                <div class="flex gap-4 rounded border border-white/10 bg-white/5 p-4">
+                  <span class="grid h-8 w-8 shrink-0 place-items-center rounded bg-gold text-sm font-black text-white">1</span>
+                  <p class="font-bold leading-6 text-mist">Review liquidity and care funding before a health event forces timing.</p>
+                </div>
+                <div class="flex gap-4 rounded border border-white/10 bg-white/5 p-4">
+                  <span class="grid h-8 w-8 shrink-0 place-items-center rounded bg-gold text-sm font-black text-white">2</span>
+                  <p class="font-bold leading-6 text-mist">Coordinate legal documents, beneficiary goals, and asset positioning.</p>
+                </div>
+                <div class="flex gap-4 rounded border border-white/10 bg-white/5 p-4">
+                  <span class="grid h-8 w-8 shrink-0 place-items-center rounded bg-gold text-sm font-black text-white">3</span>
+                  <p class="font-bold leading-6 text-mist">Create a family communication plan before decisions become urgent.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="border-t border-navy/10 px-6 py-5 text-sm leading-6 text-navy/65 sm:px-8">
+            Demo assumptions: state cost data is embedded for prototype modeling, inflation is optional, and asset-based LTC benefit leverage is an educational preservation assumption rather than a policy illustration or product quote. Source framing includes 70% LTC need probability, 73% lack of planning, and the $100,000 to $300,000 benefit example provided in the strategy brief.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./data.js?v=20260416-2"></script>
+  <script src="./efs-app.js?v=20260416-1"></script>
+</body>
+</html>

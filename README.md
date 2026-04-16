@@ -1,7 +1,11 @@
-# CareCapital Shield
+# LTC Strategy Engine
 
-A single-page Enhanced Funding Solutions prototype for presenting asset-based long term care planning scenarios to attorneys and clients.
+A single-page Financial Fire Drill prototype for presenting long term care planning scenarios to attorneys and clients.
 
 ## Run
 
-Open `index.html` in a browser. The app uses Tailwind CSS and Chart.js from CDNs, with state cost data embedded in `data.js`.
+Open `index.html` in a browser for the Financial Fire Drill version.
+
+Open `efs-carecapital-shield.html` in a browser for the Enhanced Funding Solutions CareCapital Shield version.
+
+Both versions use Tailwind CSS and Chart.js from CDNs, with state cost data embedded in `data.js`.
